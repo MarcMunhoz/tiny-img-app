@@ -1,0 +1,16 @@
+{
+  "name": "tiny-img-app",
+  "version": "1.0.0",
+  "description": "A simple image compressor APP",
+  "main": "index.js",
+  "author": "Marcelo Munhoz <me@marcelomunhoz.com>",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.0.0",
+    "tinify": "^1.6.0-beta.2",
+    "yargs": "^15.3.1"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0"
+  }
+}
