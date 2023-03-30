@@ -4,26 +4,28 @@ A simple NodeJS application that use [tinyPNG](https://tinypng.com/developers) A
 
 ## Ingredients
 
-- [NodeJS](https://nodejs.org)
-- [Yarn](https://yarnpkg.com)
+- ~~[NodeJS](https://nodejs.org)~~
+- ~~[Yarn](https://yarnpkg.com)~~
+- [Docker + Docker Compose](https://docs.docker.com/get-docker)
 
 ## Installation
 
-NodeJS => https://nodejs.org/en/download/
-
 ```bash
-yarn install
+docker compose up -d
 ```
 
 ## How to run it
 
 **Example bellow**
 
+Copy the image to `img/`
+
 ```bash
-node app.js tinyimg --path=/path/of/image/ --name=image_name --type=jpg
+# inside container
+node app.js tinyimg --name=image_name --type=jpg
 ```
 
-The application will compress the image and will return "image_name.min.jpg"
+The application will compress the image and will return `img/image_name.min.jpg`
 
 **\* Allowed formats: JPG/PNG**
 
