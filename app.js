@@ -5,11 +5,6 @@ yargs.command({
   command: "tinyimg",
   describe: "Compress a image",
   builder: {
-    path: {
-      demandOption: true,
-      describe: "Image path",
-      type: "string",
-    },
     name: {
       demandOption: true,
       describe: "Image name",
@@ -23,7 +18,7 @@ yargs.command({
       type: "string",
     },
   },
-  handler: (argv) => tinify.compress(argv.path, argv.name, argv.type),
+  handler: (argv) => tinify.compress(argv.name, argv.type),
 });
 
 yargs.parse();

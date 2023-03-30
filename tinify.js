@@ -10,8 +10,9 @@ const info = chalk.blue;
 const danger = chalk.orange;
 const error = chalk.red;
 
-const compress = (path, name, type) => {
-  const fullpath = path + name + "." + type;
+const compress = (name, type) => {
+  const imgFolder = "img/"
+  const fullpath = imgFolder + name + "." + type;
 
   fs.readFile(fullpath, function (err, sourceData) {
     if (err) throw error(err);
@@ -21,7 +22,7 @@ const compress = (path, name, type) => {
 
       let availableCompressionsThisMonth = 500 - tinify.compressionCount;
 
-      fs.writeFileSync(path + name + ".min." + type, resultData, { encoding: "binary" });
+      fs.writeFileSync(imgFolder + name + ".min." + type, resultData, { encoding: "binary" });
 
       console.log(success("Image compressed!"));
 
