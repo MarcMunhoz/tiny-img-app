@@ -16,6 +16,10 @@ docker compose up -d
 
 ## How to run it
 
+**- It's mandatory to have an API KEY in [TinyPNG project](https://tinypng.com/developers) to run this app.**
+
+**- Then define the API_KEY in the `.env` file**
+
 **Example bellow**
 
 Copy the image to `img/`
